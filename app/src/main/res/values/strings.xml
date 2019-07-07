@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">HipHopGam</string>
+    <string name="app_name">MoloudGram</string>
+    <string name="username">USERNAME</string>
+    <string name="home">HOME</string>
+    <string name="search">SERACH</string>
+    <string name="add">ADD</string>
+    <string name="profile">PROFILE</string>
+    <string name="Hip_Hop_Gram">HipHopGram</string>
+
+    <string name="username_error">Please Enter username</string>
+    <string name="password_error">Please Enter password</string>
 </resources>
