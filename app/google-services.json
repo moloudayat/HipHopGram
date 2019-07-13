@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "239973805841",
+    "firebase_url": "https://filmgozar-f9064.firebaseio.com",
+    "project_id": "filmgozar-f9064",
+    "storage_bucket": "filmgozar-f9064.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239973805841:android:4023ab34f7feb89e",
+        "android_client_info": {
+          "package_name": "com.hiphopgam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239973805841-ilu23tb8b5s49s9oqf3jukmf5rvglgt9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQfQVPrz6VlQKuDnpznU3lpg9vmUWhiVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239973805841-ilu23tb8b5s49s9oqf3jukmf5rvglgt9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
