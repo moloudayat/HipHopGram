@@ -9,6 +9,8 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
+
+import com.google.firebase.messaging.RemoteMessage;
 import com.hiphopgam.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.hiphopgam.ui.login.Login;
@@ -26,8 +28,24 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         sendRegistrationToServer(token);
     }
 
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        Log.d("From---------",remoteMessage.getFrom());
+
+        if(remoteMessage.getNotification() != null){
+            Log.d("Title----------", remoteMessage.getNotification().getTitle());
+            Log.d("body--------------", remoteMessage.getNotification().getBody());
+        }
+
+        if(remoteMessage.getData().size() >0){
+            Log.d("message data payload",remoteMessage.getData().get(""));
+        }
+        super.onMessageReceived(remoteMessage);
+    }
+
     private void sendRegistrationToServer(String token) {
         // TODO: Implement this method to send token to your app server.
+        Log.e("-----------token------------",token);
     }
 
     private void sendNotification(String messageBody) {
