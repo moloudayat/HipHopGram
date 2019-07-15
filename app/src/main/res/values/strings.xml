@@ -9,4 +9,5 @@
 
     <string name="username_error">Please Enter username</string>
     <string name="password_error">Please Enter password</string>
+    <string name="verificate">VERIFICATE</string>
 </resources>

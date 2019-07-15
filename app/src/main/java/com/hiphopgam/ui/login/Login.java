@@ -24,9 +24,11 @@ import com.hiphopgam.MainActivity;
 import com.hiphopgam.R;
 import com.hiphopgam.model.IResposeListener;
 import com.hiphopgam.ui.verification.VerificationActivity;
+import com.hiphopgam.utils.BaseActivity;
+import com.hiphopgam.utils.Navigation;
 import com.hiphopgam.webservice.WebservieCaller;
 
-public class Login extends AppCompatActivity {
+public class Login extends BaseActivity{
     @BindView(R.id.edt_username)
     AppCompatEditText username;
 
@@ -42,8 +44,6 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
         webservieCaller = new WebservieCaller();
 
         firebaseAuth= FirebaseAuth.getInstance();
@@ -72,8 +72,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onResponse(Object response) {
                 progressBar.setVisibility(View.GONE);
-                Intent intent=new Intent(Login.this, VerificationActivity.class);
-                startActivity(intent);
+                Navigation.navigate(Login.this, VerificationActivity.class);
+                finish();
             }
 
             @Override
@@ -97,4 +97,8 @@ public class Login extends AppCompatActivity {
 //                });
     }
 
+    @Override
+    public int setContentViewId() {
+        return R.layout.activity_login;
+    }
 }
